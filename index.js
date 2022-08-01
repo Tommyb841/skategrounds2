@@ -120,7 +120,7 @@ app.get('/errPage', (err, req, res) => {
 
 // localhost port
 const port =  process.env.PORT || 3000;
-app.listen(3000, () => {//{{{
+app.listen(port, () => {//{{{
 	console.log(`app is listening on port ${port}`)
 })//}}}
 
