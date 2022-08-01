@@ -22,7 +22,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const MongoStore = require("connect-mongo")(session);
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/skategrounds';}}}
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/skategrounds'; //}}}
 
 //Mongodb connection
 mongoose.connect( dbUrl, { //{{{
@@ -50,8 +50,8 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));//}}}
 
 //Session configuration, flash configs ,passport
-const secret = process.env.SECRET ||  'Thisshouldbeabettersecret';
-const store = new MongoStore({//{{{
+const secret = process.env.SECRET ||  'Thisshouldbeabettersecret';//{{{
+const store = new MongoStore({//{{{}}}
 	url: dbUrl,
 	secret,
 	touchAfter: 24*60*60
@@ -119,7 +119,8 @@ app.get('/errPage', (err, req, res) => {
 }) //}}}
 
 // localhost port
+const port =  process.env.PORT || 3000;
 app.listen(3000, () => {//{{{
-	console.log("app is listening on port 3000!")
+	console.log(`app is listening on port ${port}`)
 })//}}}
 
