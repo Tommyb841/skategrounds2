@@ -1,0 +1,4 @@
+node_modules/
+../CookiesDemo/
+./routes/routes
+.env
