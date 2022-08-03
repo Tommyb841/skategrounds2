@@ -49,3 +49,10 @@ img:hover {
 	background: white;
 	border-radius:20px;
 }
+
+#scoot-841{
+	margin: auto;
+	position: relative;
+	top: 200px;
+	padding-left:100px;
+}
