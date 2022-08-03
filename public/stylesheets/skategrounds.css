@@ -4,7 +4,6 @@ body {
 }
 
 img {
-  border: 3px solid #ddd;
   border-radius: 4px;
   padding: 5px; 
 	float: left;
@@ -18,10 +17,12 @@ h2{
 	color: white;
 }
 #showIndex {
+	display: flex;
 	max-width: 960px ;
 	border-radius: 50px;
 	padding-left: 50px;
 	padding-right: 50px;
+	margin-top: 50px;
 }
 #title {
 	text-align: center;
@@ -36,6 +37,9 @@ h2{
   "box-shadow: 10px 10px grey;"
 	max-width: 400px;
 	border-radius: 30px;
+	margin-left: 20px;
+	background-color:grey;
+	opacity: 0.6;
 }
 
 #spotImg {
@@ -52,6 +56,7 @@ h2{
 img:hover {
 }
 #mainContainer{
+	justify-content: center;
 	max-width: 666px;
 }
 
@@ -62,6 +67,7 @@ img:hover {
 	justify-content: center;
 }
 
+/* this is the vidoe on the landing page */
 #scoot-841{
 	margin: auto;
 	position: relative;
