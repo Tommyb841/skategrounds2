@@ -1,5 +1,6 @@
 body {
-  background-color: #7C1717;
+ background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2017%2F11%2F22%2F322583-photography-city-urban-building-New_York_City-skyscraper-street.jpg&f=1&nofb=1");
+ background-size: cover;
 }
 
 img {
@@ -7,7 +8,7 @@ img {
   border-radius: 4px;
   padding: 5px; 
 	float: left;
-  width:  200px;
+  width:  600px;
   height: 300px;
 }
 #cardCont {
@@ -22,9 +23,11 @@ img {
 #spotCard {
 	position: centered;
 	margin-bottom: 30px;
-  border: 3px solid #ddd;
-  box-shadow: 10px 10px grey;
+	"border: 3px solid #ddd;"
+  "box-shadow: 10px 10px grey;"
+	max-width: 400px;
 }
+
 #spotImg {
 	float: align-self-centered;
 	left: 15px;
@@ -37,4 +40,12 @@ img {
 
 }
 img:hover {
+}
+#mainContainer{
+	max-width: 666px;
+}
+
+#landing-title{
+	background: white;
+	border-radius:20px;
 }
