@@ -3,39 +3,40 @@
 <%layout('/layouts/boilerplate')%>
 
 <div class="container" id="mainContainer">
-	
-	<div class=" text-center mt-3 " id="index-header">
-		<h1>Welcome To SkateGrounds</h1>  
-		<h2>Check out these spots</h2>
-	</div>
-	<div class="container" id="cardContainer">
-		
-	</div>
-		<!-- shows all skate spots -->
-	<div id="showIndex" class="flexbox-container">
-		<!-- loops through cards to be dispayed  -->
-		 <% for (let spot of  spots) {%>
-			<!-- contains the row of skatespots -->
-		 <div class="card" style="width: 18rem;" id="spotCard">
-				<!--<div class="col">  -->
-						<div class=" card-title col-md-4 col-l-4">
-							<!-- picture that links to the skatespot page -->
-							<a href="/skategrounds/<%= spot.id %>"><img class="card-img-top" id="spotImg" src="<%= spot.image[0].url %>"></a>
-						</div>
-						<!-- 2nd column for skatespot -->
-						<div class="col-md-8">
-								<!-- holds the title that links to the skatespot  -->
-								<div class="card-body">
-									<h5 class="card-title" id="title"><a href="/skategrounds/<%= spot.id %>"><%=spot.title %></a></h5>
-									<p class="card-text" id="description"><%= spot.description %></p>
-								</div>
-						</div>
-				<!-- </div> -->
-		</div>
-			<%} %>
-	</div>
+  <div class="text-center mt-3" id="index-header">
+    <h1>Welcome To SkateGrounds</h1>
+    <h2>Check out these spots</h2>
+  </div>
+
+  <!-- shows all skate spots -->
+  <div id="showIndex" class="container">
+    <div class="row" id="cards">
+      <div>
+        <!-- loops through cards to be displayed  -->
+        <% for (let spot of spots) {%>
+        <!-- contains the row of skatespots -->
+        <div class="columns" id="index-row" style="margin-top: 3px">
+          <div class="card" style="width: 18rem" id="spotCard">
+            <div class="card-title">
+              <!-- picture that links to the skatespot page -->
+              <a href="/skategrounds/<%= spot.id %>"
+                ><img
+                  class="card-img-top img-thumbnail"
+                  id="spotImg"
+                  src="<%= spot.image[0].url %>"
+              /></a>
+            </div>
+            <!-- holds the title that links to the skatespot  -->
+            <div class="card-body">
+              <h5 class="card-title" id="spot-title">
+                <a href="/skategrounds/<%= spot.id %>"><%=spot.title %></a>
+              </h5>
+              <p class="card-text" id="description"><%= spot.description %></p>
+            </div>
+          </div>
+        </div>
+        <%} %>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- ./new.ejs -->
-<!-- ../errPage.ejs -->
-
-

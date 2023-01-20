@@ -1,7 +1,8 @@
+const { boolean } = require('joi');
 const mongoose = require('mongoose');
 const Review = require('./reviews');
 const Schema = mongoose.Schema;
-const Attribute = require('./attributes')
+const Atrributes = require('./attributes');
 
 const ImageSchema = new Schema({
     url: String,
@@ -15,18 +16,19 @@ ImageSchema.virtual('thumbnail').get(function(){
 const spotSchema = new Schema({
 	title: String, 
 	image:[ImageSchema],  
+	attributes:[
+		{
+			type: Schema.Types.ObjectId,
+			ref:'Attribute'
+		}
+	],
 	description: String, 
 	location: String,
 	author:{
 		type: Schema.Types.ObjectId,
 		ref: 'User'
 	},
-	attributes: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: 'Attribute'
-		}
-	],
+	rails: Boolean,
 	reviews: [
 		{ 
 			type: Schema.Types.ObjectId,

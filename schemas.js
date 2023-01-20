@@ -5,6 +5,8 @@ module.exports.skategroundSchema = Joi.object({
 		title: Joi.string().min(1).max(40).required(),
 	//	image: Joi.string().required(),
 		description: Joi.string().min(5).max(200).required(),
+		stairs: Joi.boolean(),
+		rails: Joi.boolean(),
 	}).required(),
 	deleteImages: Joi.array()
 });

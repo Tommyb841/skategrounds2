@@ -60,14 +60,3 @@ module.exports.validateReview = (req, res, next) => {//{{{
         next();
     }
 }//}}}
-
-//validateAttribute module
-module.exports.validateAttribute = (req, res, next) =>	{//{{{
- const { error } = attributeSchema.validate(req.body);
-    if (error) {
-        const msg = error.details.map(el => el.message).join(',')
-        throw new expresserror(msg, 400)
-    } else {
-        next();
-    }
-}//}}}

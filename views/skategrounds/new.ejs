@@ -7,20 +7,18 @@
 			<div class="col-6 offset-3">
 				<form action="/skategrounds" method="POST" id="form1" class="validated-form "novalidate enctype="multipart/form-data">
 					<div>
-						<label class="form-label" for="title">Title</label>
-						<input class="form-control mb-2"type="text" name="skateground[title]" id="title" required>
+						<input class="form-control mb-2"type="text" name="skateground[title]" id="title" placeholder="Title" required>
 					</div>
-					<!-- this is the original file input -->
-					<!-- 	<input type="file" name="image" multiple> -->
-						<!-- this is the new file input -->
-						
-						<div class="form-file custom-file-">
-							<input type="file" class="form-control custom-file-lable" id="image" name="image" multiple>
-							<!-- 	<label class="input-group-text" for="image">Images</label>-->
-						</div>
+					<div class="form-file custom-file-">
+						<input type="file" class="form-control custom-file-lable" id="image" name="image" multiple>
+						<!-- 	<label class="input-group-text" for="image">Images</label>-->
+					</div>
+					<div class="form-check form-check-inline">
+						<input type="checkbox" class="form-check-input" id="rails" name="skateground[rails]" checked>
+						<label class="form-check-label" for="rails">rails</label>
+					</div>
 					<div>
-						<label class="form-label" for="description">Description</label>
-						<textarea class="form-control mb-2" type="text" name="skateground[description]"  id="description" required></textarea>
+						<textarea class="form-control mb-2" type="text" name="skateground[description]"  id="description"  placeholder="Description" required></textarea>
 					</div>
 						<button type="submit" class="btn btn-primary" form="form1">Create</button>
 				</form>
@@ -28,12 +26,3 @@
 			</div>
 	</div>
 </div>
-
-<!-- input-group mb-3 -->
-<!-- <div class="form-file">
-							<input type="file" class="form-file-input" id="image" name="image" multiple> 
-							<label class="form-file-label" for="image"> 
-								<span class="form-file-text"></span>
-								<span class="form-file-button" ></span>
-							</label>
-						</div> -->
